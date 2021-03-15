@@ -1,2 +1,2 @@
-# iris-ws
-iris websocket test
+# yunxin-go
+yunxin go sdk
