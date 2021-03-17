@@ -56,7 +56,7 @@ type TeamUpdateParam struct {
 	TeamMemberLimit int `json:"teamMemberLimit,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/群组功能（高级群）?#编辑群资料
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E9%AB%98%E7%BA%A7%E7%BE%A4%EF%BC%89?#%E7%BC%96%E8%BE%91%E7%BE%A4%E8%B5%84%E6%96%99
 // 编辑群资料
 func (y *YunxinIM) ApiTeamUpdate(param *TeamUpdateParam) *ImResp {
 	return y.PostFrom(_API_TEAM_UPDATE_URL, param)

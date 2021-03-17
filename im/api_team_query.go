@@ -16,8 +16,8 @@ type TeamQueryParam struct {
 	IgnoreInvalid bool `json:"ignoreInvalid,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/群组功能（高级群）?#群信息与成员列表查询
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E9%AB%98%E7%BA%A7%E7%BE%A4%EF%BC%89?#%E7%BE%A4%E4%BF%A1%E6%81%AF%E4%B8%8E%E6%88%90%E5%91%98%E5%88%97%E8%A1%A8%E6%9F%A5%E8%AF%A2
 // 群信息与成员列表查询
-func (y *YunxinIM) ApiTeamQuery(tids string, ope int, ignoreinvalid bool) *ImResp {
-	return y.PostFrom(_API_TEAM_QUERY_URL, TeamQueryParam{tids, ope, ignoreinvalid})
+func (y *YunxinIM) ApiTeamQuery(tids string, ope int, ignoreInvalid bool) *ImResp {
+	return y.PostFrom(_API_TEAM_QUERY_URL, TeamQueryParam{tids, ope, ignoreInvalid})
 }

@@ -15,13 +15,11 @@ type MsgSendBatchAttachMsgParam struct {
 	// 是否必须: true
 	Attach string `json:"attach"`
 
-	// 推送文案，最长500个字符。具体参见
-	// 推送配置参数详解。
+	// 推送文案，最长500个字符。具体参见 推送配置参数详解。
 	// 是否必须: false
 	Pushcontent string `json:"pushcontent,omitempty"`
 
-	// 必须是JSON,不能超过2k字符。该参数与APNs推送的payload含义不同。具体参见
-	// 推送配置参数详解。
+	// 必须是JSON,不能超过2k字符。该参数与APNs推送的payload含义不同。具体参见 推送配置参数详解。
 	// 是否必须: false
 	Payload string `json:"payload,omitempty"`
 
@@ -56,7 +54,7 @@ type MsgSendBatchAttachMsgParam struct {
 	Env string `json:"env,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/消息功能?#批量发送点对点普通消息
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%9F%A5
 // 批量发送点对点自定义系统通知
 func (y *YunxinIM) ApiMsgSendBatchAttachMsg(param *MsgSendBatchAttachMsgParam) *ImResp {
 	return y.PostFrom(_API_MSG_SEND_BATCH_ATTACH_MSG_URL, param)

@@ -16,7 +16,7 @@ type TeamAddManagerParam struct {
 	Members string `json:"members"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/群组功能（高级群）?#任命管理员
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E9%AB%98%E7%BA%A7%E7%BE%A4%EF%BC%89?#%E4%BB%BB%E5%91%BD%E7%AE%A1%E7%90%86%E5%91%98
 // 任命管理员
 func (y *YunxinIM) ApiTeamAddManager(tid string, owner string, members string) *ImResp {
 	return y.PostFrom(_API_TEAM_ADD_MANAGER_URL, TeamAddManagerParam{tid, owner, members})

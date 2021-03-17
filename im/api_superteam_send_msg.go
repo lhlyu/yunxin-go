@@ -11,8 +11,7 @@ type SuperteamSendMsgParam struct {
 	// 是否必须: true
 	FromAccid string `json:"fromAccid"`
 
-	// 0
-	// 表示文本消息,
+	// 0 表示文本消息,
 	// 1 表示图片，
 	// 2 表示语音，
 	// 3 表示视频，
@@ -52,8 +51,7 @@ type SuperteamSendMsgParam struct {
 	// 是否必须: false
 	YidunAntiCheating string `json:"yidunAntiCheating,omitempty"`
 
-	// 发消息时特殊指定的行为选项,JSON格式，可用于指定消息的漫游，存云端历史，发送方多端同步，消息抄送等特殊行为;option中字段不填时表示默认值
-	// ，option示例:
+	// 发消息时特殊指定的行为选项,JSON格式，可用于指定消息的漫游，存云端历史，发送方多端同步，消息抄送等特殊行为;option中字段不填时表示默认值 ，option示例:
 	// {"roam":true,"history":false,"sendersync":true,"route":false}
 	// 字段说明：
 	// 1. roam: 该消息是否需要漫游，默认true（需要app开通漫游消息功能）；
@@ -100,7 +98,7 @@ type SuperteamSendMsgParam struct {
 	Env string `json:"env,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/群组功能（超大群）?#发送普通消息
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E5%8F%91%E9%80%81%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF
 // 发送普通消息
 func (y *YunxinIM) ApiSuperteamSendMsg(param *SuperteamSendMsgParam) *ImResp {
 	return y.PostFrom(_API_SUPERTEAM_SEND_MSG_URL, param)

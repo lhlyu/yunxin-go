@@ -22,8 +22,7 @@ type UserCreateParam struct {
 	// 是否必须: false
 	Icon string `json:"icon,omitempty"`
 
-	// 网易云信IM账号可以指定登录IM
-	// token值，最大长度128字符，
+	// 网易云信IM账号可以指定登录IM token值，最大长度128字符，
 	// 并更新，如果未指定，会自动生成token，并在
 	// 创建成功后返回
 	// 是否必须: false
@@ -54,7 +53,7 @@ type UserCreateParam struct {
 	Ex string `json:"ex,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/网易云通信ID
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BD%91%E6%98%93%E4%BA%91%E9%80%9A%E4%BF%A1ID
 // 创建网易云信IM账号
 func (y *YunxinIM) ApiUserCreate(param *UserCreateParam) *ImResp {
 	return y.PostFrom(_API_USER_CREATE_URL, param)

@@ -7,7 +7,7 @@ yunxin go sdk
 
 ### 已经完成
 
-- [ ] [IM即时通信](./im/README.md)
+- [x] [IM即时通信](./im/README.md)
 - [ ] 信令
 - [ ] 短信服务
 - [ ] 一键登录

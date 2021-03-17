@@ -3,9 +3,7 @@ package im
 const _API_SUPERTEAM_SEND_ATTACH_MSG_URL = "https://api.netease.im/nimserver/superteam/sendAttachMsg.action"
 
 type SuperteamSendAttachMsgParam struct {
-
-	// 发送者accid,
-	// 用户帐号，最大长度32字符
+	// 发送者accid, 用户帐号，最大长度32字符
 	// 是否必须: true
 	From string `json:"from"`
 
@@ -56,7 +54,7 @@ type SuperteamSendAttachMsgParam struct {
 	ForcePushList string `json:"forcePushList,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/群组功能（超大群）?#发送自定义系统通知
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E5%8F%91%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%9F%A5
 // 发送自定义系统通知
 func (y *YunxinIM) ApiSuperteamSendAttachMsg(param *SuperteamSendAttachMsgParam) *ImResp {
 	return y.PostFrom(_API_SUPERTEAM_SEND_ATTACH_MSG_URL, param)

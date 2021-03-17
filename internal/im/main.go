@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"log"
-	"net/url"
 	"os"
 	"path"
 	"strings"
@@ -27,14 +26,13 @@ func main() {
 		total++
 		name := extractName(data.Action)
 		entity, fields := parse(name.ParamName, data.Param)
-		doc, _ := url.PathUnescape(data.Doc)
 		args, fill := LessArgs(fields)
 		model := Model{
 			FilePath:    path.Join(dir, name.FileName),
 			ActionName:  name.ActionName,
 			ActionUrl:   data.Action,
 			ParamEntity: entity,
-			Doc:         doc,
+			Doc:         data.Doc,
 			FuncNote:    data.Note,
 			FuncName:    name.FuncName,
 			ParamName:   name.ParamName,
@@ -49,6 +47,10 @@ func main() {
 		log.Fatal("生成数量不对", len(docs), total)
 	}
 	genDoc(dir, docs)
+	// 生成其他文件
+	genFiles(dir, map[string]interface{}{
+		"Docs": docs,
+	})
 }
 
 func LessArgs(fields []*Field) (args, fill string) {
@@ -58,8 +60,8 @@ func LessArgs(fields []*Field) (args, fill string) {
 	argsItems := make([]string, 0)
 	fillItems := make([]string, 0)
 	for _, field := range fields {
-		argsItems = append(argsItems, fmt.Sprintf("%s %s", strings.ToLower(handlerKeyWord(field.Name)), strings.ToLower(field.Kind)))
-		fillItems = append(fillItems, strings.ToLower(handlerKeyWord(field.Name)))
+		argsItems = append(argsItems, fmt.Sprintf("%s %s", littleCamelCase(handlerKeyWord(field.Name)), strings.ToLower(field.Kind)))
+		fillItems = append(fillItems, littleCamelCase(handlerKeyWord(field.Name)))
 	}
 	return strings.Join(argsItems, ","), strings.Join(fillItems, ",")
 }
@@ -105,6 +107,8 @@ func genDoc(dir string, docs []string) {
 	write.WriteString("```go\n")
 	write.WriteString(demo)
 	write.WriteString("```\n\n")
+	write.WriteString("### 注意\n\n")
+	write.WriteString("> 消息抄送 和 第三方回调 没有实现(作者没用到)\n\n")
 	write.WriteString("### 方法\n\n")
 	write.WriteString("```go\n")
 	for _, doc := range docs {

@@ -2,12 +2,12 @@ package im
 
 import (
 	"bytes"
+	"errors"
 	"github.com/lhlyu/yunxin-go/util"
-	"github.com/spf13/cast"
+	"github.com/lhlyu/yunxin-go/util/qs"
 	"github.com/tidwall/gjson"
 	"io/ioutil"
 	"net/http"
-	"net/url"
 	"strconv"
 	"time"
 )
@@ -18,9 +18,8 @@ const (
 )
 
 func (*YunxinIM) Format(v interface{}) ([]byte, error) {
-	var uv url.Values
-	uv = cast.ToStringMapStringSlice(util.ToJsonStr(v))
-	return []byte(uv.Encode()), nil
+	uv, err := qs.Values(v)
+	return []byte(uv.Encode()), err
 }
 
 func (y *YunxinIM) PostFrom(uri string, v interface{}) *ImResp {
@@ -28,12 +27,30 @@ func (y *YunxinIM) PostFrom(uri string, v interface{}) *ImResp {
 }
 
 func (y *YunxinIM) DoPost(uri string, v interface{}, contentType string) *ImResp {
+	imResp := &ImResp{}
+	if v == nil {
+		err := errors.New("param is nil")
+		y.LogHandler(err)
+		imResp.Err = err
+		return imResp
+	}
+	if y.LogHandler == nil {
+		y.LogHandler = defaultLogHandler
+	}
+	if y.RandHandler == nil {
+		y.RandHandler = defaultRandHandler
+	}
 	if contentType == "" {
 		contentType = _ContentType
 	}
-	b, _ := y.Format(v)
+
+	b, err := y.Format(v)
+	if err != nil {
+		y.LogHandler(err)
+		imResp.Err = err
+		return imResp
+	}
 	req, err := http.NewRequest(http.MethodPost, uri, bytes.NewBuffer(b))
-	imResp := &ImResp{}
 
 	if err != nil {
 		y.LogHandler(err)

@@ -11,8 +11,7 @@ type SuperteamRecallMsgParam struct {
 	// 是否必须: true
 	Timetag string `json:"timetag"`
 
-	// 发送者accid,
-	// 用户帐号，最大长度32字符
+	// 发送者accid, 用户帐号，最大长度32字符
 	// 是否必须: true
 	From string `json:"from"`
 
@@ -37,7 +36,7 @@ type SuperteamRecallMsgParam struct {
 	PushPayload string `json:"pushPayload,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/群组功能（超大群）?#撤回消息
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E6%92%A4%E5%9B%9E%E6%B6%88%E6%81%AF
 // 撤回消息
 func (y *YunxinIM) ApiSuperteamRecallMsg(param *SuperteamRecallMsgParam) *ImResp {
 	return y.PostFrom(_API_SUPERTEAM_RECALL_MSG_URL, param)

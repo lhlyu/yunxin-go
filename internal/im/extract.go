@@ -84,3 +84,34 @@ func camelString(s string) string {
 	}
 	return string(data[:])
 }
+
+// 字符串小驼峰
+func littleCamelCase(s string) string {
+	needCamel := false
+	isFirst := true
+	s = strings.Map(func(r rune) rune {
+		if isFirst {
+			isFirst = false
+			if r < 65 || r > 90 {
+				return r
+			}
+			return r + 32
+		}
+		if needCamel {
+			if r == 32 || r == 95 {
+				return -1
+			}
+			needCamel = false
+			if r < 97 || r > 122 {
+				return r
+			}
+			return r - 32
+		}
+		if r == 32 || r == 95 {
+			needCamel = true
+			return -1
+		}
+		return r
+	}, s)
+	return s
+}
