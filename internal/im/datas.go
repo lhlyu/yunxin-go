@@ -579,14 +579,14 @@ invitemode	String	否	谁可以邀请他人入群，0-管理员(默认),1-所有
 uptinfomode	String	否	谁可以修改群资料，0-管理员(默认),1-所有人。其它返回414
 upcustommode	String	否	谁可以更新群自定义属性，0-管理员(默认),1-所有人。其它返回414
 tlevel	String	否	群人数级别，[2,200(默认)]`,
-		Note: "创建群",
+		Note: "创建超级群",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/superteam/dismiss.action",
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 owner	String	是	群主用户帐号，最大长度32字符`,
-		Note: "解散群",
+		Note: "解散超级群",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E8%A7%A3%E6%95%A3%E7%BE%A4",
 	},
 	{
@@ -595,7 +595,7 @@ owner	String	是	群主用户帐号，最大长度32字符`,
 owner	String	是	群主或管理员用户帐号，最大长度32字符
 inviteAccids	String	是	被拉入群的accid(JSONArray)，["aaa","bbb"]，一次最多操作200个
 msg	String	是	邀请发送的文字，最大长度150字符`,
-		Note: "拉人入群",
+		Note: "拉人入超级群",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E6%8B%89%E4%BA%BA%E5%85%A5%E7%BE%A4",
 	},
 	{
@@ -603,7 +603,7 @@ msg	String	是	邀请发送的文字，最大长度150字符`,
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 owner	String	是	群主或管理员用户帐号，最大长度32字符
 kickAccids	String	是	被踢出群的accid(JSONArray)，["aaa","bbb"]，一次最多操作200个`,
-		Note: "踢人出群",
+		Note: "踢人出超级群",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E8%B8%A2%E4%BA%BA%E5%87%BA%E7%BE%A4",
 	},
 	{
@@ -620,13 +620,13 @@ invitemode	String	否	谁可以邀请他人入群，0-管理员(默认),1-所有
 uptinfomode	String	否	谁可以修改群资料，0-管理员(默认),1-所有人。其它返回414
 upcustommode	String	否	谁可以更新群自定义属性，0-管理员(默认),1-所有人。其它返回414
 beinvitemode	String	否	邀请同意模式，0-邀请需要同意(默认)，1-邀请不需要同意。其它返回414`,
-		Note: "修改群信息",
+		Note: "修改超级群信息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E4%BF%AE%E6%94%B9%E7%BE%A4%E4%BF%A1%E6%81%AF",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/superteam/getTinfos.action",
 		Param: `tids	String	是	tid列表，如["3083","3084"]`,
-		Note: "获取群信息",
+		Note: "获取超级群信息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E8%8E%B7%E5%8F%96%E7%BE%A4%E4%BF%A1%E6%81%AF",
 	},
 	{
@@ -636,7 +636,7 @@ accid	String	是	要修改的用户对应的accid
 silentType	String	否	1:关闭消息提醒，0:打开消息提醒，其他值无效
 nick	String	否	群成员昵称，最大长度32字符
 custom	String	否	自定义扩展字段，最大长度32字符`,
-		Note: "修改群成员信息",
+		Note: "修改超级群成员信息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E4%BF%AE%E6%94%B9%E7%BE%A4%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF",
 	},
 	{
@@ -645,7 +645,7 @@ custom	String	否	自定义扩展字段，最大长度32字符`,
 timetag	String	是	时间戳，单位毫秒，查询的时间起点。
 limit	String	是	本次查询的条数上限(最多100条)，小于等于0，或者大于100，会提示参数错误
 reverse	String	否	1:按时间正序排列，2:按时间降序排列。其它会提示参数错误。默认是1按时间正序排列`,
-		Note: "获取群成员信息",
+		Note: "获取超级群成员信息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E8%8E%B7%E5%8F%96%E7%BE%A4%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF",
 	},
 	{
@@ -698,7 +698,7 @@ forcePushContent	String	否	发送消息时，强制推送的内容
 forcePushAll	String	否	发送消息时，强推（@操作）列表是否为群里除发送者外的所有有效成员
 forcePushList	String	否	发送消息时，强推（@操作）列表，格式为JSONArray，如"accid1","accid2"
 env	String	否	所属环境，根据env可以配置不同的抄送地址`,
-		Note: "发送普通消息",
+		Note: "超级群发送普通消息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E5%8F%91%E9%80%81%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
 	},
 	{
@@ -710,14 +710,14 @@ endtime	String	是	截止时间，ms
 limit	int	是	本次查询的消息条数上限(最多100条)，小于等于0，或者大于100，会提示参数错误
 reverse	int	否	1按时间正序排列，2按时间降序排列，其它返回参数414错误，默认是按降序排列
 type	String	否	查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息。 类型支持，1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，100:自定义`,
-		Note: "查询云端历史消息",
+		Note: "超级群查询云端历史消息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E6%9F%A5%E8%AF%A2%E4%BA%91%E7%AB%AF%E5%8E%86%E5%8F%B2%E6%B6%88%E6%81%AF",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/superteam/leave.action",
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 accid	String	是	要退群的用户对应的accid`,
-		Note: "主动退群",
+		Note: "主动退超级群",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E4%B8%BB%E5%8A%A8%E9%80%80%E7%BE%A4",
 	},
 	{
@@ -726,7 +726,7 @@ accid	String	是	要退群的用户对应的accid`,
 owner	String	是	群主用户帐号，最大长度32字符
 accid	String	是	新群主的用户对应的accid
 leave	String	是	1:群主移交群主后离开此群，2:群主移交群主后成为普通成员，其它会提示参数错误`,
-		Note: "移交群主",
+		Note: "超级群移交群主",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E7%A7%BB%E4%BA%A4%E7%BE%A4%E4%B8%BB",
 	},
 	{
@@ -734,7 +734,7 @@ leave	String	是	1:群主移交群主后离开此群，2:群主移交群主后�
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 owner	String	是	群主用户帐号，最大长度32字符
 managerAccids	String	是	要添加为管理员的accid(JSONArray)，["aaa","bbb"]，一次最多操作10个`,
-		Note: "添加管理员",
+		Note: "超级群添加管理员",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E6%B7%BB%E5%8A%A0%E7%AE%A1%E7%90%86%E5%91%98",
 	},
 	{
@@ -742,7 +742,7 @@ managerAccids	String	是	要添加为管理员的accid(JSONArray)，["aaa","bbb"
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 owner	String	是	群主用户帐号，最大长度32字符
 managerAccids	String	是	要解除掉管理员的accid(JSONArray)，["aaa","bbb"]，一次最多操作10个`,
-		Note: "解除管理员",
+		Note: "超级群解除管理员",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E8%A7%A3%E9%99%A4%E7%AE%A1%E7%90%86%E5%91%98",
 	},
 	{
@@ -750,7 +750,7 @@ managerAccids	String	是	要解除掉管理员的accid(JSONArray)，["aaa","bbb"
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 owner	String	是	群主用户帐号，最大长度32字符
 muteType	String	是	0:解除禁言，1:禁言普通成员，3:禁言整个群(包括群主)`,
-		Note: "禁言群",
+		Note: "超级群禁言群",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E7%A6%81%E8%A8%80%E7%BE%A4",
 	},
 	{
@@ -759,7 +759,7 @@ muteType	String	是	0:解除禁言，1:禁言普通成员，3:禁言整个群(�
 owner	String	是	群主或管理员用户帐号，最大长度32字符
 muteAccids	String	是	要禁言的accid(JSONArray)，["aaa","bbb"]，一次最多操作10个
 mute	String	是	1:禁言，0:解禁`,
-		Note: "禁言群成员",
+		Note: "超级群禁言群成员",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E7%A6%81%E8%A8%80%E7%BE%A4%E6%88%90%E5%91%98",
 	},
 	{
@@ -783,7 +783,7 @@ isForcePush	String	否	发自定义通知时，是否强制推送
 forcePushContent	String	否	发自定义通知时，强制推送文案，最长500个字符
 forcePushAll	String	否	发自定义通知时，强推列表是否为群里除发送者外的所有有效成员
 forcePushList	String	否	发自定义通知时，强推列表，格式为JSONArray，如"accid1","accid2"`,
-		Note: "发送自定义系统通知",
+		Note: "超级群发送自定义系统通知",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E5%8F%91%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%9F%A5",
 	},
 	{
@@ -796,7 +796,7 @@ msg	String	否	可以带上对应的描述
 ignoreTime	String	否	1表示忽略撤回时间检测，0表示不忽略，其它为非法参数，默认0，如果需要撤回时间检测，不填即可
 pushContent	String	否	推送内容，不超过500字符
 pushPayload	String	否	推送对应的payload，必须是JSON，不能超过2k字符`,
-		Note: "撤回消息",
+		Note: "超级群撤回消息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E6%92%A4%E5%9B%9E%E6%B6%88%E6%81%AF",
 	},
 	{
@@ -804,13 +804,13 @@ pushPayload	String	否	推送对应的payload，必须是JSON，不能超过2k�
 		Param: `tid	String	是	云信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
 owner	String	是	群主用户帐号，最大长度32字符
 tlevel	String	是	群人数级别，[2,200(默认)]`,
-		Note: "变更群人数级别",
+		Note: "超级群变更群人数级别",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E5%8F%98%E6%9B%B4%E7%BE%A4%E4%BA%BA%E6%95%B0%E7%BA%A7%E5%88%AB",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/superteam/joinTeams.action",
 		Param: `accid	String	是	用户帐号，最大长度32字符`,
-		Note: "获取某用户所加入的群信息",
+		Note: "超级群获取某用户所加入的群信息",
 		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E8%8E%B7%E5%8F%96%E6%9F%90%E7%94%A8%E6%88%B7%E6%89%80%E5%8A%A0%E5%85%A5%E7%9A%84%E7%BE%A4%E4%BF%A1%E6%81%AF",
 	},
 	// 聊天室

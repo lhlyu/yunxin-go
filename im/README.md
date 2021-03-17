@@ -117,45 +117,45 @@ ApiTeamLeave(tid string, accid string) *ImResp
 ApiTeamMuteTlistAll(param *TeamMuteTlistAllParam) *ImResp 
 // 获取群组禁言列表
 ApiTeamListTeamMute(tid string, owner string) *ImResp 
-// 创建群
+// 创建超级群
 ApiSuperteamCreate(param *SuperteamCreateParam) *ImResp 
-// 解散群
+// 解散超级群
 ApiSuperteamDismiss(tid string, owner string) *ImResp 
-// 拉人入群
+// 拉人入超级群
 ApiSuperteamInvite(param *SuperteamInviteParam) *ImResp 
-// 踢人出群
+// 踢人出超级群
 ApiSuperteamKick(tid string, owner string, kickAccids string) *ImResp 
-// 修改群信息
+// 修改超级群信息
 ApiSuperteamUpdateTinfo(param *SuperteamUpdateTinfoParam) *ImResp 
-// 获取群信息
+// 获取超级群信息
 ApiSuperteamGetTinfos(tids string) *ImResp 
-// 修改群成员信息
+// 修改超级群成员信息
 ApiSuperteamUpdateTlist(param *SuperteamUpdateTlistParam) *ImResp 
-// 获取群成员信息
+// 获取超级群成员信息
 ApiSuperteamGetTlists(param *SuperteamGetTlistsParam) *ImResp 
-// 发送普通消息
+// 超级群发送普通消息
 ApiSuperteamSendMsg(param *SuperteamSendMsgParam) *ImResp 
-// 查询云端历史消息
+// 超级群查询云端历史消息
 ApiSuperteamQueryHistoryMsg(param *SuperteamQueryHistoryMsgParam) *ImResp 
-// 主动退群
+// 主动退超级群
 ApiSuperteamLeave(tid string, accid string) *ImResp 
-// 移交群主
+// 超级群移交群主
 ApiSuperteamChangeOwner(param *SuperteamChangeOwnerParam) *ImResp 
-// 添加管理员
+// 超级群添加管理员
 ApiSuperteamAddManager(tid string, owner string, managerAccids string) *ImResp 
-// 解除管理员
+// 超级群解除管理员
 ApiSuperteamRemoveManager(tid string, owner string, managerAccids string) *ImResp 
-// 禁言群
+// 超级群禁言群
 ApiSuperteamMute(tid string, owner string, muteType string) *ImResp 
-// 禁言群成员
+// 超级群禁言群成员
 ApiSuperteamMuteTlist(param *SuperteamMuteTlistParam) *ImResp 
-// 发送自定义系统通知
+// 超级群发送自定义系统通知
 ApiSuperteamSendAttachMsg(param *SuperteamSendAttachMsgParam) *ImResp 
-// 撤回消息
+// 超级群撤回消息
 ApiSuperteamRecallMsg(param *SuperteamRecallMsgParam) *ImResp 
-// 变更群人数级别
+// 超级群变更群人数级别
 ApiSuperteamChangeLevel(tid string, owner string, tlevel string) *ImResp 
-// 获取某用户所加入的群信息
+// 超级群获取某用户所加入的群信息
 ApiSuperteamJoinTeams(accid string) *ImResp 
 // 创建聊天室
 ApiChatroomCreate(param *ChatroomCreateParam) *ImResp 

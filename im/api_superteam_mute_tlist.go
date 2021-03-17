@@ -21,7 +21,7 @@ type SuperteamMuteTlistParam struct {
 }
 
 // doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%BE%A4%E7%BB%84%E5%8A%9F%E8%83%BD%EF%BC%88%E8%B6%85%E5%A4%A7%E7%BE%A4%EF%BC%89?#%E7%A6%81%E8%A8%80%E7%BE%A4%E6%88%90%E5%91%98
-// 禁言群成员
+// 超级群禁言群成员
 func (y *YunxinIM) ApiSuperteamMuteTlist(param *SuperteamMuteTlistParam) *ImResp {
 	return y.PostFrom(_API_SUPERTEAM_MUTE_TLIST_URL, param)
 }
