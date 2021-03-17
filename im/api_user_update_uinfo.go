@@ -40,7 +40,7 @@ type UserUpdateUinfoParam struct {
 	Ex string `json:"ex,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/用户名片
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E7%94%A8%E6%88%B7%E5%90%8D%E7%89%87
 // 更新用户名片
 func (y *YunxinIM) ApiUserUpdateUinfo(param *UserUpdateUinfoParam) *ImResp {
 	return y.PostFrom(_API_USER_UPDATE_UINFO_URL, param)

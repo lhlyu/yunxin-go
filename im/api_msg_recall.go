@@ -48,7 +48,7 @@ type MsgRecallParam struct {
 	Attach string `json:"attach,omitempty"`
 }
 
-// doc: https://dev.yunxin.163.com/docs/product/IM即时通讯/服务端API文档/消息功能?#批量发送点对点普通消息
+// doc: https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%B6%88%E6%81%AF%E6%92%A4%E5%9B%9E
 // 消息撤回
 func (y *YunxinIM) ApiMsgRecall(param *MsgRecallParam) *ImResp {
 	return y.PostFrom(_API_MSG_RECALL_URL, param)

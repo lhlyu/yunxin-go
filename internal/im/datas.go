@@ -222,7 +222,7 @@ msgSenderNoSense	int	否	发送方是否无感知。0-有感知，1-无感知。
 msgReceiverNoSense	int	否	接受方是否无感知。0-有感知，1-无感知。若无感知，则消息接收者者无该消息的多端、漫游、历史记录等
 env	String	否	所属环境，根据env可以配置不同的抄送地址`,
 		Note: "给用户或者高级群发送普通消息，包括文本，图片，语音，视频和地理位置",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E5%8F%91%E9%80%81%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/sendBatchMsg.action",
@@ -292,7 +292,7 @@ forcePushAll	String	否	发群自定义通知时，强推列表是否为群里�
 forcePushList	String	否	发群自定义通知时，强推列表，格式为JSONArray，如"accid1","accid2"
 env	String	否	所属环境，根据env可以配置不同的抄送地址`,
 		Note: "发送自定义系统通知",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E5%8F%91%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%9F%A5",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/sendBatchAttachMsg.action",
@@ -314,7 +314,7 @@ isForcePush	String	否	发自定义通知时，是否强制推送
 forcePushContent	String	否	发自定义通知时，强制推送文案，最长500个字符
 env	String	否	所属环境，根据env可以配置不同的抄送地址`,
 		Note: "批量发送点对点自定义系统通知",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%9F%A5",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/upload.action",
@@ -324,7 +324,7 @@ ishttps	String	否	返回的url是否需要为https的url，true或false，默�
 expireSec	Integer	否	文件过期时长，单位：秒，必须大于等于86400
 tag	String	否	文件的应用场景，不超过32个字符`,
 		Note: "文件上传",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/fileUpload.action",
@@ -334,7 +334,7 @@ ishttps	String	否	返回的url是否需要为https的url，true或false，默�
 expireSec	Integer	否	文件过期时长，单位：秒，必须大于等于86400
 tag	String	否	文件的应用场景，不超过32个字符`,
 		Note:        "文件上传（multipart方式）",
-		Doc:         "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:         "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%EF%BC%88multipart%E6%96%B9%E5%BC%8F%EF%BC%89",
 		ContentType: "_FileContentType",
 	},
 	{
@@ -344,7 +344,7 @@ endTime	Long	是	被清理文件的结束时间(毫秒级)
 contentType	String	否	被清理的文件类型，文件类型包含contentType则被清理 如原始文件类型为"image/png"，contentType参数为"image",则满足被清理条件
 tag	String	否	被清理文件的应用场景，完全相同才被清理 如上传文件时知道场景为"usericon",tag参数为"usericon"，则满足被清理条件`,
 		Note: "上传NOS文件清理任务",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E4%B8%8A%E4%BC%A0NOS%E6%96%87%E4%BB%B6%E6%B8%85%E7%90%86%E4%BB%BB%E5%8A%A1",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/recall.action",
@@ -360,7 +360,7 @@ payload	String	否	推送对应的payload,必须是JSON,不超过2K字符
 env	String	否	所属环境，根据env可以配置不同的抄送地址
 attach	String	否	扩展字段，最大5000字符`,
 		Note: "消息撤回",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%B6%88%E6%81%AF%E6%92%A4%E5%9B%9E",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/broadcastMsg.action",
@@ -370,7 +370,7 @@ isOffline	String	否	是否存离线，true或false，默认false
 ttl	int	否	存离线状态下的有效期，单位小时，默认7天
 targetOs	String	否	目标客户端，默认所有客户端，jsonArray，格式：["ios","aos","pc","web","mac"]`,
 		Note: "发送广播消息",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E5%8F%91%E9%80%81%E5%B9%BF%E6%92%AD%E6%B6%88%E6%81%AF",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/delMsgOneWay.action",
@@ -381,7 +381,7 @@ from	String	是	发消息的accid
 to	String	是	如果点对点消息，为接收消息的accid,如果群消息，为对应群的tid
 msg	String	否	可以带上对应的描述`,
 		Note: "单向撤回消息",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E5%8D%95%E5%90%91%E6%92%A4%E5%9B%9E%E6%B6%88%E6%81%AF",
 	},
 	{
 		Action: "https://api.netease.im/nimserver/msg/delRoamSession.action",
@@ -389,7 +389,7 @@ msg	String	否	可以带上对应的描述`,
 from	String	是	发送者accid, 用户帐号，最大长度32字节
 to	String	是	type=1表示对端accid，type=2表示tid`,
 		Note: "删除会话漫游",
-		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E6%89%B9%E9%87%8F%E5%8F%91%E9%80%81%E7%82%B9%E5%AF%B9%E7%82%B9%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E6%B6%88%E6%81%AF%E5%8A%9F%E8%83%BD?#%E5%88%A0%E9%99%A4%E4%BC%9A%E8%AF%9D%E6%BC%AB%E6%B8%B8",
 	},
 	// 群组功能（高级群）
 	{
@@ -815,226 +815,374 @@ tlevel	String	是	群人数级别，[2,200(默认)]`,
 	},
 	// 聊天室
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/create.action",
+		Param: `creator	String	是	聊天室属主的账号accid
+name	String	是	聊天室名称，长度限制128个字符
+announcement	String	否	公告，长度限制4096个字符
+broadcasturl	String	否	直播地址，长度限制1024个字符
+ext	String	否	扩展字段，最长4096字符
+queuelevel	int	否	队列管理权限：0:所有人都有权限变更队列，1:只有主播管理员才能操作变更。默认0
+`,
+		Note: "创建聊天室",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%88%9B%E5%BB%BA%E8%81%8A%E5%A4%A9%E5%AE%A4",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/get.action",
+		Param: `roomid	long	是	聊天室id
+needOnlineUserCount	String	否	是否需要返回在线人数，true或false，默认false`,
+		Note: "查询聊天室信息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%9F%A5%E8%AF%A2%E8%81%8A%E5%A4%A9%E5%AE%A4%E4%BF%A1%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/getBatch.action",
+		Param: `roomids	String	是	多个roomid，格式为：["6001","6002","6003"]（JSONArray对应的roomid，如果解析出错，会报414错误），限20个roomid
+needOnlineUserCount	String	否	是否需要返回在线人数，true或false，默认false`,
+		Note: "批量查询聊天室信息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E8%81%8A%E5%A4%A9%E5%AE%A4%E4%BF%A1%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/update.action",
+		Param: `roomid	long	是	聊天室id
+name	String	否	聊天室名称，长度限制128个字符
+announcement	String	否	公告，长度限制4096个字符
+broadcasturl	String	否	直播地址，长度限制1024个字符
+ext	String	否	扩展字段，长度限制4096个字符
+needNotify	String	否	true或false,是否需要发送更新通知事件，默认true
+notifyExt	String	否	通知事件扩展字段，长度限制2048
+queuelevel	int	否	队列管理权限：0:所有人都有权限变更队列，1:只有主播管理员才能操作变更`,
+		Note: "更新聊天室信息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%9B%B4%E6%96%B0%E8%81%8A%E5%A4%A9%E5%AE%A4%E4%BF%A1%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/toggleCloseStat.action",
+		Param: `roomid	long	是	聊天室id
+operator	String	是	操作者账号，必须是创建者才可以操作
+valid	String	是	true或false，false:关闭聊天室；true:打开聊天室`,
+		Note: "修改聊天室开/关闭状态",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E4%BF%AE%E6%94%B9%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%BC%80/%E5%85%B3%E9%97%AD%E7%8A%B6%E6%80%81",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/setMemberRole.action",
+		Param: `roomid	long	是	聊天室id
+operator	String	是	操作者账号accid
+target	String	是	被操作者账号accid
+opt	int	是	操作：
+1: 设置为管理员，operator必须是创建者
+2:设置普通等级用户，operator必须是创建者或管理员
+-1:设为黑名单用户，operator必须是创建者或管理员
+-2:设为禁言用户，operator必须是创建者或管理员
+optvalue	String	是	true或false，true:设置；false:取消设置；
+执行“取消”设置后，若成员非禁言且非黑名单，则变成游客
+notifyExt	String	否	通知扩展字段，长度限制2048，请使用json格式`,
+		Note: "设置聊天室内用户角色",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E8%AE%BE%E7%BD%AE%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%86%85%E7%94%A8%E6%88%B7%E8%A7%92%E8%89%B2",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/requestAddr.action",
+		Param: `roomid	long	是	聊天室id
+accid	String	是	进入聊天室的账号
+clienttype	int	否	1:weblink（客户端为web端时使用）; 2:commonlink（客户端为非web端时使用）;3:wechatlink(微信小程序使用), 默认1
+clientip	String	否	客户端ip，传此参数时，会根据用户ip所在地区，返回合适的地址`,
+		Note: "请求聊天室地址",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E8%AF%B7%E6%B1%82%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%9C%B0%E5%9D%80",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/sendMsg.action",
+		Param: `roomid	long	是	聊天室id
+msgId	String	是	客户端消息id，使用uuid等随机串，msgId相同的消息会被客户端去重
+fromAccid	String	是	消息发出者的账号accid
+msgType	int	是	消息类型：
+0: 表示文本消息，
+1: 表示图片，
+2: 表示语音，
+3: 表示视频，
+4: 表示地理位置信息，
+6: 表示文件，
+10: 表示Tips消息，
+100: 自定义消息类型（特别注意，对于未对接易盾反垃圾功能的应用，该类型的消息不会提交反垃圾系统检测）
+resendFlag	int	否	重发消息标记，0：非重发消息，1：重发消息，如重发消息会按照msgid检查去重逻辑
+attach	String	否	文本消息：填写消息文案;
+其它类型消息，请参考 消息格式示例；
+长度限制4096字符
+ext	String	否	消息扩展字段，内容可自定义，请使用JSON格式，长度限制4096字符
+skipHistory	int	否	是否跳过存储云端历史，0：不跳过，即存历史消息；1：跳过，即不存云端历史；默认0
+abandonRatio	int	否	可选，消息丢弃的概率。取值范围[0-9999]；
+其中0代表不丢弃消息，9999代表99.99%的概率丢弃消息，默认不丢弃；
+注意如果填写了此参数，下面的highPriority参数则会无效；
+此参数可用于流控特定业务类型的消息。
+highPriority	Boolean	否	可选，true表示是高优先级消息，云信会优先保障投递这部分消息；false表示低优先级消息。默认false。
+强烈建议应用恰当选择参数，以便在必要时，优先保障应用内的高优先级消息的投递。若全部设置为高优先级，则等于没有设置，单个聊天室最多支持每秒10条的高优先级消息，超过的会转为普通消息。 高优先级消息可以设置进入后重发，见needHighPriorityMsgResend参数
+needHighPriorityMsgResend	Boolean	否	可选，true表示会重发消息，false表示不会重发消息。默认true。注:若设置为true， 用户离开聊天室之后重新加入聊天室，在有效期内还是会收到发送的这条消息，目前有效期默认30s。在没有配置highPriority时needHighPriorityMsgResend不生效。
+useYidun	int	否	可选，单条消息是否使用易盾反垃圾，可选值为0。
+0：（在开通易盾的情况下）不使用易盾反垃圾而是使用通用反垃圾，包括自定义消息。
+
+若不填此字段，即在默认情况下，若应用开通了易盾反垃圾功能，则使用易盾反垃圾来进行垃圾消息的判断
+yidunAntiCheating	String	否	可选，易盾反垃圾增强反作弊专属字段，限制json，长度限制1024字符（详见易盾反垃圾接口文档反垃圾防刷版专属字段）
+bid	String	否	可选，反垃圾业务ID，实现“单条消息配置对应反垃圾”，若不填则使用原来的反垃圾配置
+antispam	String	否	对于对接了易盾反垃圾功能的应用，本消息是否需要指定经由易盾检测的内容（antispamCustom）。
+true或false, 默认false。
+只对消息类型为：100 自定义消息类型 的消息生效。
+antispamCustom	String	否	在antispam参数为true时生效。
+自定义的反垃圾检测内容, JSON格式，长度限制同body字段，不能超过5000字符，要求antispamCustom格式如下：
+
+{"type":1,"data":"custom content"}
+
+字段说明：
+1. type: 1：文本，2：图片。
+2. data: 文本内容or图片地址。
+env	String	否	所属环境，根据env可以配置不同的抄送地址`,
+		Note: "发送聊天室消息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%8F%91%E9%80%81%E8%81%8A%E5%A4%A9%E5%AE%A4%E6%B6%88%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/addRobot.action",
+		Param: `roomid	long	是	聊天室id
+accids	JSONArray	是	机器人账号accid列表，必须是有效账号，账号数量上限100个
+roleExt	String	否	机器人信息扩展字段，请使用json格式，长度4096字符
+notifyExt	String	否	机器人进入聊天室通知的扩展字段，请使用json格式，长度2048字符`,
+		Note: "往聊天室内添加机器人",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%BE%80%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%86%85%E6%B7%BB%E5%8A%A0%E6%9C%BA%E5%99%A8%E4%BA%BA",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/removeRobot.action",
+		Param: `roomid	long	是	聊天室id
+accids	JSONArray	是	机器人账号accid列表，必须是有效账号，账号数量上限100个`,
+		Note: "从聊天室内删除机器人",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E4%BB%8E%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%86%85%E5%88%A0%E9%99%A4%E6%9C%BA%E5%99%A8%E4%BA%BA",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/cleanRobot.action",
+		Param: `roomid	long	是	聊天室id
+notify	boolean	否	是否发送退出聊天室通知消息，默认为false`,
+		Note: "清空聊天室机器人",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%B8%85%E7%A9%BA%E8%81%8A%E5%A4%A9%E5%AE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/temporaryMute.action",
+		Param: `roomid	long	是	聊天室id
+operator	String	是	操作者accid,必须是管理员或创建者
+target	String	是	被禁言的目标账号accid
+muteDuration	long	是	0:解除禁言;>0设置禁言的秒数，不能超过2592000秒(30天)
+needNotify	String	否	操作完成后是否需要发广播，true或false，默认true
+notifyExt	String	否	通知广播事件中的扩展字段，长度限制2048字符`,
+		Note: "设置临时禁言状态",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E8%AE%BE%E7%BD%AE%E4%B8%B4%E6%97%B6%E7%A6%81%E8%A8%80%E7%8A%B6%E6%80%81",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queueOffer.action",
+		Param: `roomid	long	是	聊天室id
+key	String	是	elementKey,新元素的UniqKey,长度限制128字符
+value	String	是	elementValue,新元素内容，长度限制4096字符
+operator	String	否	提交这个新元素的操作者accid，默认为该聊天室的创建者，若operator对应的帐号不存在，会返回404错误。
+若指定的operator不在线，则添加元素成功后的通知事件中的操作者默认为聊天室的创建者；若指定的operator在线，则通知事件的操作者为operator。
+transient	String	否	这个新元素的提交者operator的所有聊天室连接在从该聊天室掉线或者离开该聊天室的时候，提交的元素是否需要删除。
+true：需要删除；false：不需要删除。默认false。
+当指定该参数为true时，若operator当前不在该聊天室内，则会返回403错误。`,
+		Note: "往聊天室有序队列中新加或更新元素",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%BE%80%E8%81%8A%E5%A4%A9%E5%AE%A4%E6%9C%89%E5%BA%8F%E9%98%9F%E5%88%97%E4%B8%AD%E6%96%B0%E5%8A%A0%E6%88%96%E6%9B%B4%E6%96%B0%E5%85%83%E7%B4%A0",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queuePoll.action",
+		Param: `roomid	long	是	聊天室id
+key	String	否	目前元素的elementKey,长度限制128字符，不填表示取出头上的第一个`,
+		Note: "从队列中取出元素",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E4%BB%8E%E9%98%9F%E5%88%97%E4%B8%AD%E5%8F%96%E5%87%BA%E5%85%83%E7%B4%A0",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queueList.action",
+		Param: `roomid	long	是	聊天室id`,
+		Note: "排序列出队列中所有元素",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%8E%92%E5%BA%8F%E5%88%97%E5%87%BA%E9%98%9F%E5%88%97%E4%B8%AD%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queueDrop.action",
+		Param: `roomid	long	是	聊天室id`,
+		Note: "删除清理整个队列",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%88%A0%E9%99%A4%E6%B8%85%E7%90%86%E6%95%B4%E4%B8%AA%E9%98%9F%E5%88%97",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queueInit.action",
+		Param: `roomid	long	是	聊天室id
+sizeLimit	long	是	队列长度限制，0~1000`,
+		Note: "初始化队列",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%98%9F%E5%88%97",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/muteRoom.action",
+		Param: `roomid	long	是	聊天室id
+operator	String	是	操作者accid，必须是管理员或创建者
+mute	String	是	true或false
+needNotify	String	否	true或false，默认true
+notifyExt	String	否	通知扩展字段`,
+		Note: "将聊天室整体禁言",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%B0%86%E8%81%8A%E5%A4%A9%E5%AE%A4%E6%95%B4%E4%BD%93%E7%A6%81%E8%A8%80",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/stats/chatroom/topn.action",
+		Param: `topn	int	否	topn值，可选值 1~500，默认值100
+timestamp	long	否	需要查询的指标所在的时间坐标点，不提供则默认当前时间，单位秒/毫秒皆可
+period	String	否	统计周期，可选值包括 hour/day, 默认hour
+orderby	String	否	取排序值,可选值 active/enter/message,分别表示按日活排序，进入人次排序和消息数排序， 默认active`,
+		Note: "查询聊天室统计指标TopN",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%9F%A5%E8%AF%A2%E8%81%8A%E5%A4%A9%E5%AE%A4%E7%BB%9F%E8%AE%A1%E6%8C%87%E6%A0%87TopN",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/membersByPage.action",
+		Param: `roomid	long	是	聊天室id
+type	int	是	需要查询的成员类型,0:固定成员;1:非固定成员;2:仅返回在线的固定成员
+endtime	long	是	单位毫秒，按时间倒序最后一个成员的时间戳,0表示系统当前时间
+limit	long	是	返回条数，<=100`,
+		Note: "分页获取成员列表",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%88%86%E9%A1%B5%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E5%88%97%E8%A1%A8",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queryMembers.action",
+		Param: `roomid	long	是	聊天室id
+accids	JSONArray	是	["abc","def"], 账号列表，最多200条`,
+		Note: "批量获取在线成员信息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%89%B9%E9%87%8F%E8%8E%B7%E5%8F%96%E5%9C%A8%E7%BA%BF%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/updateMyRoomRole.action",
+		Param: `roomid	long	是	聊天室id
+accid	String	是	需要变更角色信息的accid
+save	boolean	否	变更的信息是否需要持久化，默认false，仅对聊天室固定成员生效
+needNotify	boolean	否	是否需要做通知
+notifyExt	String	否	通知的内容，长度限制2048
+nick	String	否	聊天室室内的角色信息：昵称，不超过64个字符
+avator	String	否	聊天室室内的角色信息：头像
+ext	String	否	聊天室室内的角色信息：开发者扩展字段`,
+		Note: "变更聊天室内的角色信息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%8F%98%E6%9B%B4%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%86%85%E7%9A%84%E8%A7%92%E8%89%B2%E4%BF%A1%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queueBatchUpdateElements.action",
+		Param: `roomid	long	是	聊天室id
+operator	String	是	操作者accid,必须是管理员或创建者
+elements	String	是	更新的key-value对，最大200个，示例：{"k1":"v1","k2":"v2"}
+needNotify	boolean	否	true或false,是否需要发送更新通知事件，默认true
+notifyExt	String	否	通知事件扩展字段，长度限制2048`,
+		Note: "批量更新聊天室队列元素",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0%E8%81%8A%E5%A4%A9%E5%AE%A4%E9%98%9F%E5%88%97%E5%85%83%E7%B4%A0",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/queryUserRoomIds.action",
+		Param: `creator	String	是	聊天室创建者accid`,
+		Note: "查询用户创建的开启状态聊天室列表",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E5%88%9B%E5%BB%BA%E7%9A%84%E5%BC%80%E5%90%AF%E7%8A%B6%E6%80%81%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%88%97%E8%A1%A8",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/updateInOutNotification.action",
+		Param: `roomid	long	是	聊天室ID
+close	boolean	是	true/false, 是否关闭进出通知`,
+		Note: "关闭指定聊天室进出通知",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E8%81%8A%E5%A4%A9%E5%AE%A4?#%E5%85%B3%E9%97%AD%E6%8C%87%E5%AE%9A%E8%81%8A%E5%A4%A9%E5%AE%A4%E8%BF%9B%E5%87%BA%E9%80%9A%E7%9F%A5",
+	},
+	// 历史记录
+	{
+		Action: "https://api.netease.im/nimserver/history/querySessionMsg.action",
+		Param: `from	String	是	发送者accid
+to	String	是	接收者accid
+begintime	String	是	开始时间，毫秒级
+endtime	String	是	截止时间，毫秒级
+limit	int	是	本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误
+reverse	int	否	1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列，即时间戳最晚的消息排在最前面。
+type	String	否	查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3
+类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义`,
+		Note: "单聊云端历史消息查询",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E5%8D%95%E8%81%8A%E4%BA%91%E7%AB%AF%E5%8E%86%E5%8F%B2%E6%B6%88%E6%81%AF%E6%9F%A5%E8%AF%A2",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/history/queryTeamMsg.action",
+		Param: `tid	String	是	群id
+accid	String	是	查询用户对应的accid.
+begintime	String	是	开始时间，毫秒级
+endtime	String	是	截止时间，毫秒级
+limit	int	是	本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误
+reverse	int	否	1按时间正序排列，2按时间降序排列。其它返回参数414错误。默认是按降序排列，即时间戳最晚的消息排在最前面。
+type	String	否	查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3
+类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义
+checkTeamValid	Boolean	否	true(默认值)：表示需要检查群是否有效,accid是否为有效的群成员；设置为false则仅检测群是否存在，accid是否曾经为群成员。`,
+		Note: "群聊云端历史消息查询",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E7%BE%A4%E8%81%8A%E4%BA%91%E7%AB%AF%E5%8E%86%E5%8F%B2%E6%B6%88%E6%81%AF%E6%9F%A5%E8%AF%A2",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/history/queryChatroomMsg.action",
+		Param: `roomid	long	是	聊天室id
+accid	String	是	用户账号
+timetag	long	是	查询的时间戳锚点，13位。reverse=1时timetag为起始时间戳，reverse=2时timetag为终止时间戳
+limit	int	是	本次查询的消息条数上限(最多200条),小于等于0，或者大于200，会提示参数错误
+reverse	int	否	1按时间正序排列，2按时间降序排列。其它返回参数414错误。默认是2按时间降序排列
+type	String	否	查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息。
+格式示例： 0,1,2,3
+支持的消息类型：0:文本，1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:智能机器人消息，100:自定义消息。用英文逗号分隔。`,
+		Note: "聊天室云端历史消息查询",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E8%81%8A%E5%A4%A9%E5%AE%A4%E4%BA%91%E7%AB%AF%E5%8E%86%E5%8F%B2%E6%B6%88%E6%81%AF%E6%9F%A5%E8%AF%A2",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/chatroom/deleteHistoryMessage.action",
+		Param: `roomid	long	是	聊天室id
+fromAcc	String	是	消息发送者的accid
+msgTimetag	long	是	消息的时间戳，单位毫秒，应该拿到原始消息中的时间戳为参数`,
+		Note: "删除聊天室云端历史消息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E5%88%A0%E9%99%A4%E8%81%8A%E5%A4%A9%E5%AE%A4%E4%BA%91%E7%AB%AF%E5%8E%86%E5%8F%B2%E6%B6%88%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/history/queryUserEvents.action",
+		Param: `accid	String	是	要查询用户的accid
+begintime	String	是	开始时间，毫秒级
+endtime	String	是	截止时间，毫秒级
+limit	int	是	本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误
+reverse	int	否	1按时间正序排列，2按时间降序排列。其它返回参数414错误。默认是按降序排列`,
+		Note: "用户登录登出事件记录查询",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%99%BB%E5%87%BA%E4%BA%8B%E4%BB%B6%E8%AE%B0%E5%BD%95%E6%9F%A5%E8%AF%A2",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/history/queryBroadcastMsg.action",
+		Param: `broadcastId	long	否	查询的起始ID，0表示查询最近的limit条。默认0。
+limit	int	否	查询的条数，最大100。默认100。
+type	long	否	查询的类型，1表示所有，2表示查询存离线的，3表示查询不存离线的。默认1。`,
+		Note: "批量查询广播消息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E5%B9%BF%E6%92%AD%E6%B6%88%E6%81%AF",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/history/queryBroadcastMsgById.action",
+		Param: `broadcastId	long	是	广播消息ID，应用内唯一。`,
+		Note: "查询单条广播消息",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95?#%E6%9F%A5%E8%AF%A2%E5%8D%95%E6%9D%A1%E5%B9%BF%E6%92%AD%E6%B6%88%E6%81%AF",
+	},
+	// 在线状态
+	{
+		Action: "https://api.netease.im/nimserver/event/subscribe/add.action",
+		Param: `accid	String	是	事件订阅人账号
+eventType	int	是	事件类型，固定设置为1，即 eventType=1
+publisherAccids	String	是	被订阅人的账号列表，最多100个账号，JSONArray格式。示例：["pub_user1","pub_user2"]
+ttl	long	是	有效期，单位：秒。取值范围：60～2592000（即60秒到30天）`,
+		Note: "订阅在线状态事件",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81?#%E8%AE%A2%E9%98%85%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81%E4%BA%8B%E4%BB%B6",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/event/subscribe/delete.action",
+		Param: `accid	String	是	事件订阅人账号
+eventType	int	是	事件类型，固定设置为1，即 eventType=1
+publisherAccids	String	是	取消被订阅人的账号列表，最多100个账号，JSONArray格式。示例：["pub_user1","pub_user2"]`,
+		Note: "取消在线状态事件订阅",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81?#%E5%8F%96%E6%B6%88%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81%E4%BA%8B%E4%BB%B6%E8%AE%A2%E9%98%85",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/event/subscribe/batchdel.action",
+		Param: `accid	String	是	事件订阅人账号
+eventType	int	是	事件类型，固定设置为1，即 eventType=1`,
+		Note: "取消全部在线状态事件订阅",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81?#%E5%8F%96%E6%B6%88%E5%85%A8%E9%83%A8%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81%E4%BA%8B%E4%BB%B6%E8%AE%A2%E9%98%85",
 	},
 	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
-	},
-	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
-	},
-	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
-	},
-	{
-		Action: "",
-		Param:  ``,
-		Note:   "",
-		Doc:    "",
+		Action: "https://api.netease.im/nimserver/event/subscribe/query.action",
+		Param: `accid	String	是	事件订阅人账号
+eventType	int	是	事件类型，固定设置为1，即 eventType=1
+publisherAccids	String	是	被订阅人的账号列表，最多100个账号，JSONArray格式。示例：["pub_user1","pub_user2"]`,
+		Note: "查询在线状态事件订阅关系",
+		Doc:  "https://dev.yunxin.163.com/docs/product/IM%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/%E6%9C%8D%E5%8A%A1%E7%AB%AFAPI%E6%96%87%E6%A1%A3/%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81?#%E6%9F%A5%E8%AF%A2%E5%9C%A8%E7%BA%BF%E7%8A%B6%E6%80%81%E4%BA%8B%E4%BB%B6%E8%AE%A2%E9%98%85%E5%85%B3%E7%B3%BB",
 	},
 	{
 		Action: "",

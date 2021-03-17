@@ -13,7 +13,7 @@ type IM interface {
 	// 重置网易云信IM token
 	ApiUserRefreshToken(accid string) *ImResp
 	// 封禁网易云信IM账号
-	ApiUserBlock(accid string, needkick string, kicknotifyext string) *ImResp
+	ApiUserBlock(accid string, needkick string, kickNotifyExt string) *ImResp
 	// 解禁网易云信IM账号
 	ApiUserUnblock(accid string) *ImResp
 	// 更新用户名片
@@ -21,7 +21,7 @@ type IM interface {
 	// 获取用户名片
 	ApiUserGetUinfos(accids string) *ImResp
 	// 设置桌面端在线时，移动端是否需要推送
-	ApiUserSetDonnop(accid string, donnopopen string) *ImResp
+	ApiUserSetDonnop(accid string, donnopOpen string) *ImResp
 	// 账号全局禁言
 	ApiUserMute(accid string, mute bool) *ImResp
 	// 加好友
@@ -29,7 +29,7 @@ type IM interface {
 	// 更新好友相关信息
 	ApiFriendUpdate(param *FriendUpdateParam) *ImResp
 	// 删除好友
-	ApiFriendDelete(accid string, faccid string, isdeletealias bool) *ImResp
+	ApiFriendDelete(accid string, faccid string, isDeleteAlias bool) *ImResp
 	// 获取好友关系
 	ApiFriendGet(accid string, updatetime int64, createtime int64) *ImResp
 	// 设置黑名单/静音
@@ -69,7 +69,7 @@ type IM interface {
 	// 编辑群资料
 	ApiTeamUpdate(param *TeamUpdateParam) *ImResp
 	// 群信息与成员列表查询
-	ApiTeamQuery(tids string, ope int, ignoreinvalid bool) *ImResp
+	ApiTeamQuery(tids string, ope int, ignoreInvalid bool) *ImResp
 	// 获取群组详细信息
 	ApiTeamQueryDetail(tid int64) *ImResp
 	// 获取群组已读消息的已读详情信息
@@ -101,7 +101,7 @@ type IM interface {
 	// 拉人入群
 	ApiSuperteamInvite(param *SuperteamInviteParam) *ImResp
 	// 踢人出群
-	ApiSuperteamKick(tid string, owner string, kickaccids string) *ImResp
+	ApiSuperteamKick(tid string, owner string, kickAccids string) *ImResp
 	// 修改群信息
 	ApiSuperteamUpdateTinfo(param *SuperteamUpdateTinfoParam) *ImResp
 	// 获取群信息
@@ -119,11 +119,11 @@ type IM interface {
 	// 移交群主
 	ApiSuperteamChangeOwner(param *SuperteamChangeOwnerParam) *ImResp
 	// 添加管理员
-	ApiSuperteamAddManager(tid string, owner string, manageraccids string) *ImResp
+	ApiSuperteamAddManager(tid string, owner string, managerAccids string) *ImResp
 	// 解除管理员
-	ApiSuperteamRemoveManager(tid string, owner string, manageraccids string) *ImResp
+	ApiSuperteamRemoveManager(tid string, owner string, managerAccids string) *ImResp
 	// 禁言群
-	ApiSuperteamMute(tid string, owner string, mutetype string) *ImResp
+	ApiSuperteamMute(tid string, owner string, muteType string) *ImResp
 	// 禁言群成员
 	ApiSuperteamMuteTlist(param *SuperteamMuteTlistParam) *ImResp
 	// 发送自定义系统通知
@@ -134,6 +134,78 @@ type IM interface {
 	ApiSuperteamChangeLevel(tid string, owner string, tlevel string) *ImResp
 	// 获取某用户所加入的群信息
 	ApiSuperteamJoinTeams(accid string) *ImResp
+	// 创建聊天室
+	ApiChatroomCreate(param *ChatroomCreateParam) *ImResp
+	// 查询聊天室信息
+	ApiChatroomGet(roomid int64, needOnlineUserCount string) *ImResp
+	// 批量查询聊天室信息
+	ApiChatroomGetBatch(roomids string, needOnlineUserCount string) *ImResp
+	// 更新聊天室信息
+	ApiChatroomUpdate(param *ChatroomUpdateParam) *ImResp
+	// 修改聊天室开/关闭状态
+	ApiChatroomToggleCloseStat(roomid int64, operator string, valid string) *ImResp
+	// 设置聊天室内用户角色
+	ApiChatroomSetMemberRole(param *ChatroomSetMemberRoleParam) *ImResp
+	// 请求聊天室地址
+	ApiChatroomRequestAddr(param *ChatroomRequestAddrParam) *ImResp
+	// 发送聊天室消息
+	ApiChatroomSendMsg(param *ChatroomSendMsgParam) *ImResp
+	// 往聊天室内添加机器人
+	ApiChatroomAddRobot(param *ChatroomAddRobotParam) *ImResp
+	// 从聊天室内删除机器人
+	ApiChatroomRemoveRobot(roomid int64, accids string) *ImResp
+	// 清空聊天室机器人
+	ApiChatroomCleanRobot(roomid int64, notify bool) *ImResp
+	// 设置临时禁言状态
+	ApiChatroomTemporaryMute(param *ChatroomTemporaryMuteParam) *ImResp
+	// 往聊天室有序队列中新加或更新元素
+	ApiChatroomQueueOffer(param *ChatroomQueueOfferParam) *ImResp
+	// 从队列中取出元素
+	ApiChatroomQueuePoll(roomid int64, key string) *ImResp
+	// 排序列出队列中所有元素
+	ApiChatroomQueueList(roomid int64) *ImResp
+	// 删除清理整个队列
+	ApiChatroomQueueDrop(roomid int64) *ImResp
+	// 初始化队列
+	ApiChatroomQueueInit(roomid int64, sizeLimit int64) *ImResp
+	// 将聊天室整体禁言
+	ApiChatroomMuteRoom(param *ChatroomMuteRoomParam) *ImResp
+	// 查询聊天室统计指标TopN
+	ApiStatsChatroomTopn(param *StatsChatroomTopnParam) *ImResp
+	// 分页获取成员列表
+	ApiChatroomMembersByPage(param *ChatroomMembersByPageParam) *ImResp
+	// 批量获取在线成员信息
+	ApiChatroomQueryMembers(roomid int64, accids string) *ImResp
+	// 变更聊天室内的角色信息
+	ApiChatroomUpdateMyRoomRole(param *ChatroomUpdateMyRoomRoleParam) *ImResp
+	// 批量更新聊天室队列元素
+	ApiChatroomQueueBatchUpdateElements(param *ChatroomQueueBatchUpdateElementsParam) *ImResp
+	// 查询用户创建的开启状态聊天室列表
+	ApiChatroomQueryUserRoomIds(creator string) *ImResp
+	// 关闭指定聊天室进出通知
+	ApiChatroomUpdateInOutNotification(roomid int64, close bool) *ImResp
+	// 单聊云端历史消息查询
+	ApiHistoryQuerySessionMsg(param *HistoryQuerySessionMsgParam) *ImResp
+	// 群聊云端历史消息查询
+	ApiHistoryQueryTeamMsg(param *HistoryQueryTeamMsgParam) *ImResp
+	// 聊天室云端历史消息查询
+	ApiHistoryQueryChatroomMsg(param *HistoryQueryChatroomMsgParam) *ImResp
+	// 删除聊天室云端历史消息
+	ApiChatroomDeleteHistoryMessage(roomid int64, fromAcc string, msgTimetag int64) *ImResp
+	// 用户登录登出事件记录查询
+	ApiHistoryQueryUserEvents(param *HistoryQueryUserEventsParam) *ImResp
+	// 批量查询广播消息
+	ApiHistoryQueryBroadcastMsg(broadcastId int64, limit int, kind int64) *ImResp
+	// 查询单条广播消息
+	ApiHistoryQueryBroadcastMsgById(broadcastId int64) *ImResp
+	// 订阅在线状态事件
+	ApiEventSubscribeAdd(param *EventSubscribeAddParam) *ImResp
+	// 取消在线状态事件订阅
+	ApiEventSubscribeDelete(accid string, eventType int, publisherAccids string) *ImResp
+	// 取消全部在线状态事件订阅
+	ApiEventSubscribeBatchdel(accid string, eventType int) *ImResp
+	// 查询在线状态事件订阅关系
+	ApiEventSubscribeQuery(accid string, eventType int, publisherAccids string) *ImResp
 }
 
 type YunxinIM struct {

@@ -29,7 +29,7 @@ func parse(paramName, s string) (string, []*Field) {
 	}
 	s = getParam(paramName, fields)
 	if s == "" {
-		log.Fatal(paramName, "param entity is nil")
+		log.Fatal(paramName, " param entity is nil")
 		return "", nil
 	}
 	return s, fields
@@ -77,9 +77,9 @@ func getFields(s string) []*Field {
 			fields = append(fields, field)
 		default:
 			cursor = len(fields)
-			note := ""
+			note := "//"
 			for _, col := range cols[3:] {
-				note += "\n// " + col
+				note += " " + col
 			}
 			field := &Field{
 				Name: cols[0],
@@ -124,7 +124,7 @@ func getKind(kind string) string {
 		return "bool"
 	case "Long", "long":
 		return "int64"
-	case "Multipart":
+	case "Multipart", "JSONArray":
 		return "string"
 	default:
 		return "unknown"
