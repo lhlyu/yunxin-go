@@ -14,8 +14,8 @@ func main() {
 	var appKey,appSecret,accid string
 	yx := im.NewIM(appKey,appSecret)
 	resp := yx.ApiUserUnblock(accid)
-	if resp.IsSuccess() {
-		log.Println("err:",resp.Err)
+	if !resp.IsSuccess() {
+		log.Println(resp.Err,resp.BodyString())
 		return
 	}
 	log.Println(resp.BodyString())
