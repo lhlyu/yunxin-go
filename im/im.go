@@ -1,8 +1,10 @@
 package im
 
 import (
-	uuid "github.com/satori/go.uuid"
 	"log"
+	"net/http"
+
+	uuid "github.com/satori/go.uuid"
 )
 
 type IM interface {
@@ -216,6 +218,8 @@ type YunxinIM struct {
 	LogHandler func(err error)
 	// 自定义随机数
 	RandHandler func() string
+	// 自定义 Http 客户端
+	HttpClient *http.Client
 }
 
 func NewIM(appKey, appSecret string) IM {
@@ -224,6 +228,7 @@ func NewIM(appKey, appSecret string) IM {
 		AppSecret:   appSecret,
 		LogHandler:  defaultLogHandler,
 		RandHandler: defaultRandHandler,
+		HttpClient:  http.DefaultClient,
 	}
 }
 
