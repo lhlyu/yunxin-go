@@ -3,13 +3,14 @@ package im
 import (
 	"bytes"
 	"errors"
-	"github.com/lhlyu/yunxin-go/util"
-	"github.com/lhlyu/yunxin-go/util/qs"
-	"github.com/tidwall/gjson"
 	"io/ioutil"
 	"net/http"
 	"strconv"
 	"time"
+
+	"github.com/lhlyu/yunxin-go/util"
+	"github.com/lhlyu/yunxin-go/util/qs"
+	"github.com/tidwall/gjson"
 )
 
 const (
@@ -40,6 +41,9 @@ func (y *YunxinIM) DoPost(uri string, v interface{}, contentType string) *ImResp
 	if y.RandHandler == nil {
 		y.RandHandler = defaultRandHandler
 	}
+	if y.HttpClient == nil {
+		y.HttpClient = http.DefaultClient
+	}
 	if contentType == "" {
 		contentType = _ContentType
 	}
@@ -68,7 +72,7 @@ func (y *YunxinIM) DoPost(uri string, v interface{}, contentType string) *ImResp
 	req.Header.Set("CurTime", now)
 	req.Header.Set("CheckSum", checksum)
 
-	resp, err := http.DefaultClient.Do(req)
+	resp, err := y.HttpClient.Do(req)
 	if err != nil {
 		y.LogHandler(err)
 		imResp.Err = err
